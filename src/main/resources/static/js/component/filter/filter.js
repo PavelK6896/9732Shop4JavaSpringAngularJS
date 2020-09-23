@@ -4,7 +4,7 @@ app.directive('filBar', () => {
     return {
         restrict: 'E',
         transclude: true,
-        templateUrl: 'component/filter/filter.html',
+        templateUrl: 'js/component/filter/filter.html',
         link: (scope, element, attrs, ctrl, transclude) => {
             transclude(scope, (clone, scope) => {
                 element.append(clone); // добовляем в конец клон

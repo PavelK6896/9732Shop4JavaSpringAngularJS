@@ -1,4 +1,26 @@
 
+.color-nav-bar{
+    background: rgb(255, 183, 107);
+    min-height: 75px;
+    position: relative;
+}
+
+.shop4{
+    color: #b45608;
+}
+
+.nav-link{
+    color: #d08787;
+}
+
+.active{
+    color: rgba(219, 39, 39, 0.93);
+    background: rgb(97, 152, 213);
+}
+
+
+
+
 .error{
     color: red;
     border: 1px solid #b66a6a;
