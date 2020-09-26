@@ -1,4 +1,4 @@
-package app.web.pavelk.shop4.repo;
+package app.web.pavelk.shop4.model.repo;
 
 
 import app.web.pavelk.shop4.model.User;

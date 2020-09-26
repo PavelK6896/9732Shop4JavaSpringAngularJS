@@ -9,7 +9,6 @@ spring:
     username: sa
     password:
 
-
   jpa:
 #    generate-ddl: true
     show-sql: true
@@ -20,6 +19,11 @@ spring:
         dialect: org.hibernate.dialect.H2Dialect
         temp:
           use_jdbc_metadata_defaults: false
+
+# фикс ошибка постгреса
+        jdbc:
+          lob:
+            non_contextual_creation: true
 
   thymeleaf:
     encoding: UTF-8

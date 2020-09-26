@@ -5,10 +5,9 @@ import app.web.pavelk.shop4.service.ProductsService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -21,9 +20,16 @@ public class ProductsController {
     private final ProductsService productsService;
 
     @GetMapping(produces = "application/json")
-    @ApiOperation("Returns list of all products")
+    @ApiOperation("find all product")
     public List<Product> getAllProducts() {
         return productsService.findAll();
+    }
+
+
+    @GetMapping(value = "/{page}", produces = "application/json")
+    @ApiOperation("all product to page")
+    public Page<Product> getProductsToPage(@PathVariable Integer page) {
+        return productsService.findPage(page);
     }
 
 

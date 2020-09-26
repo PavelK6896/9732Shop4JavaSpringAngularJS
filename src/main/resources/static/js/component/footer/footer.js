@@ -14,5 +14,8 @@ app.directive('footerBar', () => {
 
 app.controller('footerCtrl', ($scope) => {
 
+    $scope.dataYear = dataYear
+
+
 
 })

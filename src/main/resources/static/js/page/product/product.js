@@ -1,42 +1,31 @@
 app.controller('productCtrl', function ($scope, $http, $window, $location, factory, $rootScope) {
 
-
-
     $scope.getListProduct = () => {
         factory.getListProduct($scope, $http, $rootScope)
     }
 
 
-    $scope.getListProductFilter = (filter, dd ) => {
-        console.log(dd)
-        $http({
-            method: 'POST',
-            url: 'http://localhost:8080/api/v1/products/filter',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-
-            data: dd.dd
-
-        }).then((response) => {
-            console.log(response.data)
-            $scope.products = response.data.content;
-
-        }, (response) => {
-
-            console.log('error', response);
-        });
-
-
+    $scope.getPageProduct = () => {
+        factory.getPageProduct($scope, $http, 1)
     }
 
-    $rootScope.$on("getListProductFilter", function (filter, dd) { //export
-        $scope.getListProductFilter(filter, dd );
-    });
+
+    $scope.nextPage = () => {
+        factory.getPageProduct($scope, $http, $scope.page.pageNumber + 2)
+    }
+    $scope.prePage = () => {
+        factory.getPageProduct($scope, $http, $scope.page.pageNumber)
+    }
 
 
-    $scope.getListProduct()
+    $scope.getPageProduct()
 
 
 });
 
+
+
+
+// $rootScope.$on("getListProductFilter", function (filter, dd) { //export
+//     $scope.getListProductFilter(filter, dd );
+// });

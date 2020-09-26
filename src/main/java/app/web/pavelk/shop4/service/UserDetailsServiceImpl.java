@@ -3,7 +3,7 @@ package app.web.pavelk.shop4.service;
 
 import app.web.pavelk.shop4.model.User;
 import app.web.pavelk.shop4.model.user.SecurityUser;
-import app.web.pavelk.shop4.repo.UserRepository;
+import app.web.pavelk.shop4.model.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
