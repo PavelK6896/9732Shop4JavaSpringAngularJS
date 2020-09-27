@@ -6,7 +6,6 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -31,6 +30,4 @@ public class ProductsController {
     public Page<Product> getProductsToPage(@PathVariable Integer page) {
         return productsService.findPage(page);
     }
-
-
 }

@@ -42,3 +42,8 @@ jwt:
   header: Authorization
   secret: proselyte
   expiration: 604800
+
+
+upload:
+  path: D:/D.BackEnd/spring/9732Shop4JavaSpringAngularJS/src/main/resources/static/js/img
+

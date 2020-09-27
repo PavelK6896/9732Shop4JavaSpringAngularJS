@@ -1,10 +1,5 @@
 app.controller('productCtrl', function ($scope, $http, $window, $location, factory, $rootScope) {
 
-    $scope.getListProduct = () => {
-        factory.getListProduct($scope, $http, $rootScope)
-    }
-
-
     $scope.getPageProduct = () => {
         factory.getPageProduct($scope, $http, 1)
     }

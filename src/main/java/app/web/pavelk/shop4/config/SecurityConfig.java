@@ -23,12 +23,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
     private final JwtRequestFilter jwtRequestFilter;
 
-
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable()
                 .authorizeRequests()
-                .antMatchers(  "/auth","registration", "/",  "/js/**", "/favicon.ico").permitAll()
+                .antMatchers(  "/auth","/registration", "/",  "/js/**", "/img/**", "/favicon.ico").permitAll()
                 .antMatchers(  "/api/v1/**").permitAll()
                 .anyRequest().authenticated()
                 .and()

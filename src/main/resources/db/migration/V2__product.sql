@@ -43,3 +43,22 @@ values (1, 1),
        (5, 3),
        (6, 3);
 
+
+
+create table img_file
+(
+    products_id   bigint not null,
+    img_file_name varchar(255),
+    foreign key (products_id) references products (id)
+);
+
+
+insert into img_file
+    (products_id, img_file_name)
+values (1, 'milk1.jpg'),
+       (2, 'curd1.jpg'),
+       (3, 'bread1.jpg'),
+       (3, 'bread2.jpg'),
+       (4, 'bread2.jpg'),
+       (5, 'sausage1.jpg'),
+       (6, 'frankfurter1.jpg');

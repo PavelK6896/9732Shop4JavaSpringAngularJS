@@ -33,6 +33,11 @@ public class Product {
     @Column(name = "price")
     private BigDecimal price;
 
+    @ElementCollection(targetClass = String.class, fetch = FetchType.EAGER)
+    @CollectionTable(name = "img_file",
+            joinColumns = @JoinColumn(name = "products_id"))
+    private List<String> imgFileName;
+
     @ManyToMany
     @JoinTable(name = "products_categories",
             joinColumns = @JoinColumn(name = "product_id"),
