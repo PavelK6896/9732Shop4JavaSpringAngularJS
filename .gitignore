@@ -1,3 +1,4 @@
 /.idea/
 /**/target/
 /**/*.iml
+/src/main/java/app/web/pavelk/shop4/setting.java

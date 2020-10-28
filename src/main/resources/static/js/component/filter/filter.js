@@ -17,7 +17,7 @@ app.directive('filBar', () => {
 let set1 = new Set();
 
 
-app.controller('f1', ($scope, $http, $window, factory, $rootScope) => {
+app.controller('f1', ($scope, $http, $window,  $rootScope) => {
 
     $scope.maxP = 500
     $scope.minP = 10

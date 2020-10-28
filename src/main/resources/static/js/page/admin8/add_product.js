@@ -1,11 +1,11 @@
 
 
 
-app.controller('addProductCtrl', function ($scope, $http, $window, $location, factory, $rootScope) {
+app.controller('addProductCtrl', function ($scope, $http, $window, $location, api, $rootScope) {
 
 
     $scope.getListProduct = () => {
-        factory.getListProduct($scope, $http, $rootScope)
+        api.getListProduct($scope, $http, $rootScope)
     }
 
     $scope.getListProduct()
